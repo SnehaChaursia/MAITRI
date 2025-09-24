@@ -1241,6 +1241,52 @@
   }
 }
 
+/* Alert Icon */
+.alert-icon {
+  background: transparent;
+  border: none;
+  color: #c6c9d3;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color .2s, background .2s, box-shadow .2s, transform .2s;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.alert-icon:hover {
+  color: #fff;
+  background: rgba(99,102,241,0.12);
+  box-shadow: 0 0 18px rgba(99,102,241,0.35) inset, 0 0 12px rgba(99,102,241,0.35);
+  transform: scale(1.05);
+}
+
+.alert-icon:active {
+  transform: scale(0.95);
+}
+
+/* Optional: Add notification badge */
+.alert-icon::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(239,68,68,0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.alert-icon.has-notifications::after {
+  opacity: 1;
+}
+
 /* Buttons reset */
 button { border: none; background: transparent; color: inherit; cursor: pointer; }
 

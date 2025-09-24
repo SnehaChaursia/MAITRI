@@ -95,7 +95,7 @@ function App() {
       {/* Universal Sidebar - Only show on non-home pages */}
       {route !== 'home' && (
         <div className="universal-sidebar">
-          <button 
+          <button
             className="back-btn"
             onClick={() => {
               window.location.hash = '#/';
@@ -116,7 +116,7 @@ function App() {
               <a href="#/about" onClick={(e) => { e.preventDefault(); window.location.hash = '#/about'; setRoute('about') }}>About</a>
               <a href="#features">Features</a>
               <div className="auth-dropdown">
-                <button 
+                <button
                   className="auth-trigger"
                   onClick={() => setIsAuthDropdownOpen(!isAuthDropdownOpen)}
                 >
@@ -130,6 +130,9 @@ function App() {
                 )}
               </div>
               <a href="#/avtar" onClick={(e) => { e.preventDefault(); window.location.hash = '#/avtar'; setRoute('avtar') }}>Avtar</a>
+              <button className="alert-icon" title="Notifications">
+                🔔
+              </button>
             </nav>
             <button
               aria-label="Toggle menu"
@@ -202,6 +205,9 @@ function App() {
               <a href="#/signup" onClick={(e) => { e.preventDefault(); window.location.hash = '#/signup'; setRoute('signup'); setSidebarOpen(false) }} className={route === 'signup' ? 'active' : ''}>Signup</a>
               <a href="#/login" onClick={(e) => { e.preventDefault(); window.location.hash = '#/login'; setRoute('login'); setSidebarOpen(false) }} className={route === 'login' ? 'active' : ''}>Login</a>
               <a href="#/avtar" onClick={(e) => { e.preventDefault(); window.location.hash = '#/avtar'; setRoute('avtar'); setSidebarOpen(false) }} className={route === 'avtar' ? 'active' : ''}>Avtar</a>
+              <button className="alert-icon" title="Notifications">
+                🔔
+              </button>
             </nav>
           </aside>
           <div className="chat-main">
