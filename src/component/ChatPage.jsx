@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 // Minimal Gemini chat integration via REST API (no extra deps)
-const GEMINI_API_KEY = "AIzaSyCBJ4pjSlgLxFZKRr2VSNJ33_NES7G0vmc" // fallback to provided key
+const GEMINI_API_KEY = "enter openAi api key here" // fallback to provided key
 
 async function generateGeminiReply(history, userText) {
   // Build contents from a short window of recent messages to keep prompt concise
